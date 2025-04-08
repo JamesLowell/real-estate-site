@@ -1,0 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+/* Set the box-sizing to border-box for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0; /* Remove margin for all elements */
+  padding: 0; /* Remove padding for all elements */
+}
+
+/* Ensure html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0; /* Remove default margin */
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 .cinzel {
+  font-family: 'Cinzel', serif;
+}
