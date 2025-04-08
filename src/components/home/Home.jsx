@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.css';
 import img1 from '../../assets/section2-img1.jpg'
 import img2 from '../../assets/section2-img2.jpg'
@@ -27,6 +27,29 @@ const imageList = [img4, img5, img6, img7, img8, img9];
 function Home() {
 
     const [selectedImage, setSelectedImage] = useState(img4);
+    const [isLoading, setIsLoading] = useState(true);
+
+    // Simulate loading delay (e.g., data fetching)
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);  // Simulate the page loading completion
+        }, 5000);  // Simulate 5 seconds loading time (you can adjust as needed)
+    }, []);
+
+    if (isLoading) {
+        return (
+            <div className="loadingScreen">
+                <img src={logo} alt="Logo" className="logo" />
+                <div className="batteryContainer">
+                    <div className="batteryOutline">
+                        <div className="batteryFill"></div>
+                    </div>
+                    <div className="loadingText">Loading... Please Wait</div>
+                </div>
+            </div>
+        );
+    }
+
 
     return (
         <div className='homeContainer'>
